@@ -1,0 +1,601 @@
+@page "/"
+@inject IJSRuntime JS
+
+<PageTitle>Saw Thu Naing | Senior Full-Stack .NET Developer</PageTitle>
+
+<!-- ===== HERO SECTION ===== -->
+<section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-social">
+        <a href="https://github.com/sawthunaing" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/sawthunaing" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:sawthunaing@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <div class="hero-content">
+        <span class="hero-greeting">// Hello, World!</span>
+        <h1 class="hero-name">Saw Thu <span class="highlight">Naing</span></h1>
+        <div class="hero-title">
+            <span id="typing-text" class="hero-typing"></span><span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-summary">
+            Senior Software Engineer with <strong>10+ years</strong> of experience designing high-scale, secure systems
+            in <strong>FinTech</strong> and <strong>streaming</strong> domains. Expert in API gateways, payment platforms,
+            and microservices integrated with VISA, Mastercard, Alipay &amp; WeChat.
+        </p>
+        <div class="hero-actions">
+            <a href="#projects" @onclick='() => ScrollTo("projects")' @onclick:preventDefault class="btn-primary">
+                <i class="fas fa-code"></i>&nbsp;View Projects
+            </a>
+            <a href="#contact" @onclick='() => ScrollTo("contact")' @onclick:preventDefault class="btn-secondary">
+                <i class="fas fa-paper-plane"></i>&nbsp;Get In Touch
+            </a>
+            <a href="https://github.com/sawthunaing" target="_blank" class="btn-secondary">
+                <i class="fab fa-github"></i>&nbsp;GitHub
+            </a>
+        </div>
+
+        <div class="hero-tech-stack">
+            <p class="hero-tech-label">// Tech Stack</p>
+            <div class="tech-icons">
+                <div class="tech-icon-item"><i class="devicon-csharp-plain"></i><span>C#</span></div>
+                <div class="tech-icon-item"><i class="devicon-dotnetcore-plain"></i><span>.NET</span></div>
+                <div class="tech-icon-item"><i class="devicon-azure-plain"></i><span>Azure</span></div>
+                <div class="tech-icon-item"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+                <div class="tech-icon-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+                <div class="tech-icon-item"><i class="devicon-kubernetes-plain"></i><span>K8s</span></div>
+                <div class="tech-icon-item"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+                <div class="tech-icon-item"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+                <div class="tech-icon-item"><i class="devicon-redis-plain"></i><span>Redis</span></div>
+                <div class="tech-icon-item"><i class="devicon-angularjs-plain"></i><span>Angular</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-scroll-indicator" @onclick='() => ScrollTo("about")'>
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+    </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section id="about">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <span class="section-label">// 01. about</span>
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-text animate-on-scroll">
+                <p>
+                    I'm a <strong>Senior Software Engineer</strong> based in the UK with over a decade of experience
+                    building robust, scalable systems for FinTech and streaming industries. I specialize in
+                    <strong>.NET Core</strong>, microservices architecture, and cloud-native solutions.
+                </p>
+                <p>
+                    My career spans across Myanmar and international markets, where I've led teams to deliver
+                    payment gateways, API platforms, and live streaming systems used by millions. I've worked with
+                    card schemes like <strong>VISA</strong> and <strong>Mastercard</strong>, and alternative payment
+                    methods including <strong>Alipay</strong> and <strong>WeChat Pay</strong>.
+                </p>
+                <p>
+                    I hold a <strong>BSc (Hons) in Business IT</strong> from the University of Greenwich, London,
+                    and am certified as a <strong>Google Professional Cloud Architect</strong> and
+                    <strong>AWS Certified Solutions Architect</strong>.
+                </p>
+                <p>
+                    Full right to work in the UK. Passionate about clean code, system design, and mentoring
+                    engineering teams toward digital transformation.
+                </p>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years Exp.</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Cloud Certs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-info animate-on-scroll">
+                <div class="info-card">
+                    <div class="info-card-title"><i class="fas fa-graduation-cap"></i>&nbsp;Education</div>
+                    <p><strong style="color: var(--text-primary);">BSc (Hons) Business IT</strong><br />
+                        University of Greenwich, London, UK<br />
+                        <span style="color: var(--text-muted); font-size: 0.8rem;">Oct 2013 – Mar 2015 | ISO 9001-2008</span>
+                    </p>
+                    <p style="margin-top: 0.75rem;"><strong style="color: var(--text-primary);">BA (English)</strong><br />
+                        Dagon University, Myanmar<br />
+                        <span style="color: var(--text-muted); font-size: 0.8rem;">Mar 2009 – Mar 2012</span>
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-title"><i class="fas fa-award"></i>&nbsp;Certifications</div>
+                    <div class="cert-badges">
+                        <span class="cert-badge"><i class="fab fa-google"></i>&nbsp;GCP Professional Architect</span>
+                        <span class="cert-badge"><i class="fab fa-aws"></i>&nbsp;AWS Solutions Architect</span>
+                        <span class="cert-badge"><i class="fas fa-certificate"></i>&nbsp;Jira Certified</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-title"><i class="fas fa-map-marker-alt"></i>&nbsp;Location &amp; Contact</div>
+                    <p>&#x1F4CD; United Kingdom (Full right to work)</p>
+                    <p>&#x1F4E7; <a href="mailto:sawthunaing@gmail.com">sawthunaing&#64;gmail.com</a></p>
+                    <p>&#x1F4F1; +44 7405 473363</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-title"><i class="fas fa-heart"></i>&nbsp;Interests</div>
+                    <p>Cloud Architecture &middot; FinTech Innovation &middot; Open Source &middot; System Design &middot; Team Leadership &middot; Digital Transformation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== EXPERIENCE SECTION ===== -->
+<section id="experience">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <span class="section-label">// 02. experience</span>
+            <h2 class="section-title">Work <span>Experience</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="timeline">
+            @foreach (var exp in experiences)
+            {
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-role">@exp.Role</div>
+                            <div class="timeline-company">@exp.Company</div>
+                        </div>
+                        <span class="timeline-period">@exp.Period</span>
+                    </div>
+                    <ul class="timeline-desc">
+                        @foreach (var item in exp.Highlights)
+                        {
+                            <li>@item</li>
+                        }
+                    </ul>
+                    <div class="timeline-tags">
+                        @foreach (var tech in exp.Technologies)
+                        {
+                            <span class="tag">@tech</span>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROJECTS SECTION ===== -->
+<section id="projects">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <span class="section-label">// 03. projects</span>
+            <h2 class="section-title">Featured <span>Projects</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="projects-grid">
+            @foreach (var project in projects)
+            {
+                <div class="project-card animate-on-scroll">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="@project.Icon"></i>
+                        </div>
+                        <div class="project-links">
+                            @if (!string.IsNullOrEmpty(project.RepoUrl))
+                            {
+                                <a href="@project.RepoUrl" target="_blank" class="project-link" title="Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            }
+                            @if (!string.IsNullOrEmpty(project.LiveUrl))
+                            {
+                                <a href="@project.LiveUrl" target="_blank" class="project-link" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                    <h3 class="project-title">@project.Title</h3>
+                    <p class="project-desc">@project.Description</p>
+                    <div class="project-tech">
+                        @foreach (var tech in project.Technologies)
+                        {
+                            <span>@tech</span>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS SECTION ===== -->
+<section id="skills">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <span class="section-label">// 04. skills</span>
+            <h2 class="section-title">Technical <span>Skills</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="skills-container">
+            @foreach (var category in skillCategories)
+            {
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-title">
+                        <i class="@category.Icon"></i>&nbsp;@category.Name
+                    </div>
+                    <div class="skill-list">
+                        @foreach (var skill in category.Skills)
+                        {
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">@skill.Name</span>
+                                    <span class="skill-level">@(skill.Level)%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--skill-width: @(skill.Level)%"></div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="skills-tags-section animate-on-scroll">
+            <p class="skills-tags-title">// All Technologies</p>
+            <div class="skills-tags">
+                <span class="skill-tag"><i class="devicon-csharp-plain"></i>&nbsp;C#</span>
+                <span class="skill-tag"><i class="devicon-dotnetcore-plain"></i>&nbsp;.NET Core</span>
+                <span class="skill-tag"><i class="devicon-java-plain"></i>&nbsp;Java</span>
+                <span class="skill-tag"><i class="devicon-spring-plain"></i>&nbsp;Spring Boot</span>
+                <span class="skill-tag"><i class="devicon-angularjs-plain"></i>&nbsp;Angular</span>
+                <span class="skill-tag"><i class="devicon-javascript-plain"></i>&nbsp;JavaScript</span>
+                <span class="skill-tag"><i class="devicon-html5-plain"></i>&nbsp;HTML5</span>
+                <span class="skill-tag"><i class="devicon-css3-plain"></i>&nbsp;CSS3</span>
+                <span class="skill-tag"><i class="devicon-mysql-plain"></i>&nbsp;MySQL</span>
+                <span class="skill-tag"><i class="devicon-microsoftsqlserver-plain"></i>&nbsp;MSSQL</span>
+                <span class="skill-tag"><i class="devicon-postgresql-plain"></i>&nbsp;PostgreSQL</span>
+                <span class="skill-tag"><i class="devicon-mongodb-plain"></i>&nbsp;MongoDB</span>
+                <span class="skill-tag"><i class="devicon-redis-plain"></i>&nbsp;Redis</span>
+                <span class="skill-tag"><i class="devicon-amazonwebservices-plain-wordmark"></i>&nbsp;AWS</span>
+                <span class="skill-tag"><i class="devicon-azure-plain"></i>&nbsp;Azure</span>
+                <span class="skill-tag"><i class="fab fa-google"></i>&nbsp;GCP</span>
+                <span class="skill-tag"><i class="devicon-docker-plain"></i>&nbsp;Docker</span>
+                <span class="skill-tag"><i class="devicon-kubernetes-plain"></i>&nbsp;Kubernetes</span>
+                <span class="skill-tag"><i class="devicon-nginx-plain"></i>&nbsp;Nginx</span>
+                <span class="skill-tag"><i class="devicon-git-plain"></i>&nbsp;Git</span>
+                <span class="skill-tag"><i class="devicon-jira-plain"></i>&nbsp;Jira</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== BLOG SECTION ===== -->
+<section id="blog">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <span class="section-label">// 05. writing</span>
+            <h2 class="section-title">Technical <span>Articles</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="blog-grid">
+            @foreach (var post in blogPosts)
+            {
+                <div class="blog-card animate-on-scroll">
+                    <div class="blog-card-header">
+                        <span class="blog-category">@post.Category</span>
+                        <span class="blog-date">@post.Date</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <h3 class="blog-title">@post.Title</h3>
+                        <p class="blog-excerpt">@post.Excerpt</p>
+                        <div class="blog-footer">
+                            <span class="blog-read-time"><i class="fas fa-clock"></i>&nbsp;@post.ReadTime</span>
+                            <a href="@post.Url" target="_blank" class="blog-read-more">
+                                Read More&nbsp;<i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <span class="section-label">// 06. contact</span>
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info animate-on-scroll">
+                <h3>Let's Work Together</h3>
+                <p>
+                    I'm currently open to new opportunities in the UK and remote positions.
+                    Whether you have a project in mind, a question, or just want to say hello —
+                    my inbox is always open.
+                </p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                        <a href="mailto:sawthunaing@gmail.com">sawthunaing&#64;gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                        <span>+44 7405 473363</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <span>United Kingdom</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fab fa-linkedin"></i></div>
+                        <a href="https://linkedin.com/in/sawthunaing" target="_blank">linkedin.com/in/sawthunaing</a>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/sawthunaing" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/sawthunaing" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:sawthunaing@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="/resume.pdf" download class="social-link" title="Download Resume">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form animate-on-scroll">
+                @if (formSubmitted)
+                {
+                    <div class="form-success">
+                        <i class="fas fa-check-circle"></i>&nbsp;
+                        Thank you! Your message has been sent. I'll get back to you soon.
+                    </div>
+                }
+                else
+                {
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" placeholder="John Doe" @bind="contactName" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="john@example.com" @bind="contactEmail" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Subject</label>
+                        <input type="text" class="form-control" placeholder="Project Inquiry / Collaboration" @bind="contactSubject" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="5" placeholder="Tell me about your project or opportunity..." @bind="contactMessage"></textarea>
+                    </div>
+                    <button class="btn-submit" @onclick="SubmitForm">
+                        <i class="fas fa-paper-plane"></i>&nbsp;Send Message
+                    </button>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    private bool formSubmitted = false;
+    private string contactName = "";
+    private string contactEmail = "";
+    private string contactSubject = "";
+    private string contactMessage = "";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var typingTexts = new[] {
+                "Senior .NET Developer",
+                "FinTech Engineer",
+                "Cloud Architect",
+                "Microservices Expert",
+                "API Gateway Specialist"
+            };
+            await JS.InvokeVoidAsync("initTypingEffect", "typing-text", typingTexts, 80);
+            await JS.InvokeVoidAsync("initScrollAnimations");
+            await AnimateSkillBarsAsync();
+        }
+    }
+
+    private async Task AnimateSkillBarsAsync()
+    {
+        await Task.Delay(800);
+        await JS.InvokeVoidAsync("eval", "document.querySelectorAll('.skill-fill').forEach(el => el.classList.add('animated'));");
+    }
+
+    private async Task ScrollTo(string id)
+    {
+        await JS.InvokeVoidAsync("scrollToSection", id);
+    }
+
+    private async Task SubmitForm()
+    {
+        if (!string.IsNullOrWhiteSpace(contactName) && !string.IsNullOrWhiteSpace(contactEmail))
+        {
+            formSubmitted = true;
+        }
+        await Task.CompletedTask;
+    }
+
+    private record Experience(string Role, string Company, string Period, string[] Highlights, string[] Technologies);
+    private record Project(string Title, string Description, string Icon, string[] Technologies, string RepoUrl = "", string LiveUrl = "");
+    private record SkillCategory(string Name, string Icon, SkillItem[] Skills);
+    private record SkillItem(string Name, int Level);
+    private record BlogPost(string Title, string Excerpt, string Category, string Date, string ReadTime, string Url = "#");
+
+    private readonly List<Experience> experiences = new()
+    {
+        new("Senior Developer", "Shwe Digit | Myanmar / Remote", "May 2021 – Present",
+            new[] {
+                "Developed and maintained Customs Department Software APIs using .NET Framework 4.6 (MVC) and SQL Server 2019, improving API reliability and performance.",
+                "Enhanced the NSW-RP system for stable data routing across customs processes, reducing message errors by ~30%.",
+                "Built RESTful APIs using .NET Core 3, .NET 6, .NET 8, SQL Server, Redis, AWS (Secret Manager, S3, ECR, SNS, SQS).",
+                "Developed API Simulator for mock responses from JSON settings using .NET 6 and .NET 8."
+            },
+            new[] { ".NET 8", "SQL Server", "Redis", "AWS", "REST API", "MVC" }),
+
+        new("Senior Backend Engineer", "Codigo Mobile – Spotv | Singapore / Remote", "Dec 2023 – Dec 2024",
+            new[] {
+                "Designed and built a live sport streaming system (Spotv) for five countries using .NET Core 6, Docker, MySQL, and AWS ECS.",
+                "Spearheaded a centralized data migration system for five legacy databases, reducing migration costs by ~40%.",
+                "Optimized vendor payment and telecom systems through improved logging and archiving processes."
+            },
+            new[] { ".NET Core 6", "Docker", "MySQL", "AWS ECS", "Brightcove", "Streaming" }),
+
+        new("Technical Lead – FinTech", "Abank | Myanmar", "Jun 2021 – Aug 2023",
+            new[] {
+                "Engineered a customized API Gateway using Ocelot with .NET Core 7, PostgreSQL, and Nginx, supporting VISA card integration.",
+                "Developed a Dynamic Bill Payment System using SOA architecture, enabling seamless addition of new billers.",
+                "Integrated a Dynamic Disbursement System with Dee Money for cross-border remittance."
+            },
+            new[] { ".NET Core 7", "Ocelot", "PostgreSQL", "Nginx", "VISA", "SOA" }),
+
+        new("Technical Lead – FinTech", "UAB Bank | Myanmar", "May 2020 – Apr 2021",
+            new[] {
+                "Maintained the uabpay system using ASP.NET 4.6, MySQL, AWS RDS, and ECS, reducing vendor costs significantly.",
+                "Developed and maintained the uabpay payment gateway with API documentation, system design, and security measures.",
+                "Managed financial transaction reconciliation for the finance department."
+            },
+            new[] { "ASP.NET 4.6", "MySQL", "AWS RDS", "ECS", "Payment Gateway" }),
+
+        new("Senior Software Engineer – FinTech", "ACE Data System Co Ltd | Myanmar", "Sep 2017 – Apr 2021",
+            new[] {
+                "Led development of Onepay wallet system for Asia Green Development Bank — Myanmar's first locally-developed wallet system.",
+                "Engineered Internet Banking for Ayeyarwaddy Farmers Development Bank, delivering both mobile and web in 6 months.",
+                "Achieved seamless integration between mobile (Android, iOS) and Backend API using ASP.NET 4.6 and MSSQL."
+            },
+            new[] { "ASP.NET 4.6", "MSSQL", "AWS", "Mobile API", "Digital Wallet" })
+    };
+
+    private readonly List<Project> projects = new()
+    {
+        new("Onepay Digital Wallet",
+            "Myanmar's first locally-developed digital wallet system for Asia Green Development Bank. Delivered on time with high-quality standards, significantly boosting company profits and impacting the Myanmar software industry.",
+            "fas fa-wallet",
+            new[] { "ASP.NET 4.6", "MySQL", "AWS RDS", "ECS", "REST API" }),
+
+        new("Spotv Live Streaming Platform",
+            "Live sport streaming system serving five countries with seamless Brightcove integration. Includes a centralized data migration system that reduced migration costs by ~40%.",
+            "fas fa-play-circle",
+            new[] { ".NET Core 6", "Docker", "MySQL", "AWS ECS", "Brightcove" }),
+
+        new("Custom API Gateway (Ocelot)",
+            "Customized API Gateway using Ocelot with .NET Core 7, supporting VISA card integration and facilitating third-party access to core banking systems with PostgreSQL and Nginx.",
+            "fas fa-network-wired",
+            new[] { ".NET Core 7", "Ocelot", "PostgreSQL", "Nginx", "VISA" }),
+
+        new("Dynamic Bill Payment System",
+            "SOA-based bill payment system enabling seamless addition of new billers without core system modifications, significantly reducing development time for Abank.",
+            "fas fa-file-invoice-dollar",
+            new[] { ".NET Core", "SOA", "PostgreSQL", "REST API" }),
+
+        new("Customs Department APIs",
+            "High-reliability APIs for Myanmar Customs Department using .NET Framework 4.6 MVC and SQL Server 2019. Enhanced NSW-RP system reduced message errors by ~30%.",
+            "fas fa-shield-alt",
+            new[] { ".NET 4.6", "SQL Server", "Redis", "AWS SNS/SQS" }),
+
+        new("Internet Banking Platform",
+            "Full-featured Internet Banking for Ayeyarwaddy Farmers Development Bank with seamless mobile (Android/iOS) and web integration, delivered in just 6 months.",
+            "fas fa-university",
+            new[] { "ASP.NET 4.6", "MSSQL", "IIS", "REST API", "Mobile" })
+    };
+
+    private readonly List<SkillCategory> skillCategories = new()
+    {
+        new("Languages & Frameworks", "fas fa-code", new[] {
+            new SkillItem("C# / .NET Core", 95),
+            new SkillItem("ASP.NET MVC", 92),
+            new SkillItem("Java / Spring Boot", 75),
+            new SkillItem("Angular / JavaScript", 78),
+            new SkillItem("HTML / CSS", 80)
+        }),
+        new("Databases", "fas fa-database", new[] {
+            new SkillItem("SQL Server / MSSQL", 92),
+            new SkillItem("MySQL", 90),
+            new SkillItem("PostgreSQL", 88),
+            new SkillItem("MongoDB", 72),
+            new SkillItem("Redis", 82)
+        }),
+        new("Cloud & DevOps", "fas fa-cloud", new[] {
+            new SkillItem("AWS (ECS, Lambda, RDS)", 88),
+            new SkillItem("Google Cloud Platform", 82),
+            new SkillItem("Azure", 75),
+            new SkillItem("Docker / Kubernetes", 85),
+            new SkillItem("CI/CD Pipelines", 83)
+        }),
+        new("Architecture & Patterns", "fas fa-sitemap", new[] {
+            new SkillItem("Microservices", 90),
+            new SkillItem("API Gateway Design", 92),
+            new SkillItem("SOA Architecture", 85),
+            new SkillItem("Payment Systems", 90),
+            new SkillItem("System Design", 88)
+        })
+    };
+
+    private readonly List<BlogPost> blogPosts = new()
+    {
+        new("Building Scalable API Gateways with Ocelot and .NET Core",
+            "A deep dive into designing and implementing a production-ready API Gateway using Ocelot middleware, covering rate limiting, authentication, and load balancing strategies.",
+            ".NET", "Jan 2024", "8 min read"),
+
+        new("FinTech Payment Integration: VISA & Mastercard Card Schemes",
+            "Practical guide to integrating card payment schemes in .NET applications, covering EMV QR codes, 3DS authentication, and reconciliation processes.",
+            "FinTech", "Nov 2023", "12 min read"),
+
+        new("Microservices Data Migration: Lessons from a 5-Database Consolidation",
+            "How we reduced migration costs by 40% when consolidating five legacy databases into a centralized system for a live streaming platform.",
+            "Architecture", "Sep 2023", "10 min read"),
+
+        new("AWS ECS vs Kubernetes: Choosing the Right Container Orchestration",
+            "A practical comparison of AWS ECS and Kubernetes for .NET microservices, based on real-world experience deploying FinTech and streaming applications.",
+            "DevOps", "Jul 2023", "9 min read"),
+
+        new("Designing Fault-Tolerant Systems with AWS SNS/SQS and .NET",
+            "How to build resilient message-driven architectures using AWS SNS and SQS with .NET Core, including dead-letter queues and retry strategies.",
+            "AWS", "May 2023", "7 min read"),
+
+        new("Digital Wallet Architecture: Building Myanmar's First Local Wallet",
+            "The technical journey of building Onepay — Myanmar's first locally-developed digital wallet — covering architecture decisions, security, and lessons learned.",
+            "FinTech", "Mar 2023", "15 min read")
+    };
+}

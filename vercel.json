@@ -1,0 +1,31 @@
+{
+  "buildCommand": "cd SawThuNaingPortfolio && dotnet publish -c Release -o ../publish",
+  "outputDirectory": "publish/wwwroot",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/((?!_framework|css|js|images|favicon.png|manifest.webmanifest).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/_framework/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    }
+  ]
+}
